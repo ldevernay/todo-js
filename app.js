@@ -9,8 +9,12 @@ $("button").on("click", function () {
     addTask();
 });
 
-$("input").keypress(function(event){
-    if(event.which == 13){
+$("input").keypress(function (event) {
+    if (event.which == 13) {
         addTask();
     }
+});
+
+$("ul").on("click", ".fa-trash", function () {
+    $(this).parent().remove();
 });
